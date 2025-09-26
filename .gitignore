@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+out/
+TestResults/
+
+# NuGet
+*.nupkg
+packages/
+
+# Secrets / local
+secrets.json
+**/appsettings.Development.json
+UserSecrets/
+
+# Others
+*.db
+*.sqlite

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.20" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OfflineTicketing.Core\OfflineTicketing.Core.csproj" />
+    <ProjectReference Include="..\OfflineTicketing.Infrastructure.IRepositories\OfflineTicketing.Infrastructure.IRepositories.csproj" />
+  </ItemGroup>
+
+</Project>

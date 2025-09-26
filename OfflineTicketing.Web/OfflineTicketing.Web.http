@@ -1,0 +1,6 @@
+@OfflineTicketing.Web_HostAddress = http://localhost:5065
+
+GET {{OfflineTicketing.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

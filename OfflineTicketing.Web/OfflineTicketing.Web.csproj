@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>5456a119-91af-4ae0-a569-9f31c7892f09</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog" Version="4.3.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OfflineTicketing.Application\OfflineTicketing.Application.csproj" />
+    <ProjectReference Include="..\OfflineTicketing.Core\OfflineTicketing.Core.csproj" />
+    <ProjectReference Include="..\OfflineTicketing.Infrastructure.Ef\OfflineTicketing.Infrastructure.Ef.csproj" />
+  </ItemGroup>
+
+</Project>
