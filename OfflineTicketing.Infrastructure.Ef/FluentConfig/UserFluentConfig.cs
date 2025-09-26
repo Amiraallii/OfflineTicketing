@@ -12,6 +12,8 @@ namespace OfflineTicketing.Infrastructure.FluentConfig
 
             builder.HasKey(x => x.Id);
 
+            builder.HasIndex(x => x.Email).IsUnique();
+
             builder.Property(x=> x.FullName)
                 .IsRequired()
                 .HasMaxLength(128);

@@ -23,8 +23,11 @@ namespace OfflineTicketing.Infrastructure.Ef.Seed
             if (!await ctx.Users.AnyAsync(u => u.Role == RoleTypeEnum.Admin, ct))
             {
                 var admin = User.Create("System Admin", "admin@local", "Admin@1234567890#Admin", RoleTypeEnum.Admin);
+                var employee = User.Create("System Employee", "employee@local", "Employee@1234567890#Employee", RoleTypeEnum.Employee);
                 admin.UpdatePassword(hasher.HashPassword(admin, "Admin@1234567890#Admin"));
+                employee.UpdatePassword(hasher.HashPassword(admin, "Employee@1234567890#Employee"));
                 ctx.Users.Add(admin);
+                ctx.Users.Add(employee);
                 await ctx.SaveChangesAsync(ct);
             }
         }
